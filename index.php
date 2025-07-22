@@ -129,7 +129,7 @@
             </div>
         </div>
 
-        <form action = "send_email.php" method = "POST">
+        <form action = "https://formsubmit.co/ralphfrncisco@gmail.com" method = "POST">
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
