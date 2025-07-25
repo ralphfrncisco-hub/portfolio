@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/smartloan", "destination": "/projects/smartloan.html" }
+  ]
+}
