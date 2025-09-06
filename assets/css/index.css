@@ -338,7 +338,7 @@ a {
     height: auto;
     max-width: 380px;
     border-radius: 5px;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 #project .col-6 .col-7
 {
@@ -654,8 +654,10 @@ footer ul li
     {
         margin-left: 2.5%;
     }
-    #project-img
-    {object-fit: contain;}
+    /* #project-img
+    {
+        object-fit: contain;
+    } */
 }
 @media (max-width: 450px)
 {
@@ -791,10 +793,10 @@ footer ul li
     }
     #project-img
     {
-        object-fit: contain;
-        height: 150px;
+        height: 140px;
         width: 270px!important;
         margin-left: 5px;
+        border-radius: 4px;
     }
 }
 @media (max-width: 395px)
@@ -803,9 +805,8 @@ footer ul li
         text-align: center;
         font-size: 26pt;
     }
-    
-    /* Project image responsive adjustments for small mobile */
-    #project-img {
-        max-width: 150px;
+    #project-anchor
+    {
+        width: 76%;
     }
 }
