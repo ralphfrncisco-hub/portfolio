@@ -14,6 +14,7 @@
 
     <link rel = "stylesheet" href = '../assets/css/index.css'>
     <link rel = "stylesheet" href = '../assets/css/fonts.css'>
+    <link rel = "stylesheet" href = '../assets/css/pageload.css'>
 
     <link rel="icon" type="image/x-icon" href="../assets/images/rx.ico">
 </head>
@@ -65,31 +66,30 @@
 <body>
     <div class = "content" id = "home">
         <div class = "container-fluid">
-            <navbar class = "row p-4" id = "navbar">
-                <div class = "col-4 col-xl-3 col-lg-2 col-md-3 col-sm-2" id = "nav-header">
-                    <h3>
-                        <a href = "../index.html">Ralph F<span id = "accent">.</span></a>
-                    </h3>
-                </div>
-                <div class = "col-xl-5 col-lg-5 col-md-7" id = "nav-links">
-                    <ul>
-                        <li><a href = "../index.html#home" class = "nav-link">Home</a></li>
-                        <li><a href = "../index.html#about" class = "nav-link">About</a></li>
-                        <li><a href = "../index.html#project" class = "nav-link active">Projects</a></li>
-                        
-                    </ul>
-                </div>
-                <div class = "col-8 col-xl-4 col-lg-5 col-md-2 col-sm-2" id = "nav-links">
-                    <ul>
-                        <li id = "download-cv">
-                            <a href = "../assets/files/resume.pdf" > <span id = "dl-text"> Download CV</span>
-                                <i class="bi bi-file-earmark-arrow-down" 
-                                style = "position: relative; font-size: 11pt; top: 0px; margin-left: 3px;" id = "dl-icon"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </navbar>
+            <navbar class = "row p-4 justify-content-between align-items-center" id = "navbar">
+            <div class = "col-4 col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-3" id = "nav-header">
+                <h3>
+                    <a href = "../index.html">Ralph F<span id = "accent">.</span></a>
+                </h3>
+            </div>
+            <div class = "col-xxl-5 col-xl-6 col-lg-6 col-md-7 nav-anchor" id = "nav-links">
+                <ul>
+                    <li><a href = "#home" class = "nav-link active" id = "home-link">Home</a></li>
+                    <li><a href = "#about" class = "nav-link" id = "about-link">About</a></li>
+                    <li><a href = "#project" class = "nav-link" id = "project-link">Projects</a></li>
+                </ul>
+            </div>
+            <div class = "col-8 col-xxl-3 col-xl-3 col-lg-3 col-md-2" id = "nav-links">
+                <ul>
+                    <li id = "download-cv">
+                        <a href = "assets/files/Resume.pdf" target="_blank"> <span id = "dl-text"> Download CV</span>
+                            <i class="bi bi-file-earmark-arrow-down" 
+                            style = "position: relative; font-size: 11pt; top: 0px; margin-left: 3px;" id = "dl-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </navbar>
 
             <div class = "container-sm px-5">
                 <div class = "col-xs-12 mt-5 mb-3" id = "project-header">
@@ -203,6 +203,7 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src ="assets/js/script.js"></script>
     <script>
@@ -242,7 +243,4 @@
             }
         }
     </script>
-
 </body>
-
-
