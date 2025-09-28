@@ -1,7 +1,7 @@
 html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: #121212;
@@ -849,3 +849,4 @@ footer ul li
         width: 76%;
     }
 }
+
