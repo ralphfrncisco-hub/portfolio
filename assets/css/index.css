@@ -497,7 +497,7 @@ footer ul li
 /* TIMELINE MEDIA QUERIES (SCOPED) */
 /* -------------------------------------- */
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 769px) {
     .timeline {
         display: block;
         margin: 50px auto 100px auto; /* Centering and better vertical spacing */
@@ -816,7 +816,7 @@ footer ul li
 
     .what-i-do
     {
-        height: 936px;
+        height: 1436px;
     }
 
     #skills
@@ -849,11 +849,6 @@ footer ul li
     {
         object-fit: contain;
     } */
-
-    #time-line
-    {
-        display: none;
-    }
 }
 @media (max-width: 450px)
 {
@@ -1018,4 +1013,5 @@ footer ul li
         width: 76%;
     }
 }
+
 
