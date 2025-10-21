@@ -723,6 +723,12 @@ footer ul li
     {
         margin-top: -5%;
     }
+    .timeline .timeline-events li .timeline-text {
+        font-size: 6pt;
+        padding: 0 15px;
+        transition: 1.5s;
+        /* Scoped P tag for timeline text */
+    }
 }
 
 
@@ -845,6 +851,11 @@ footer ul li
     {
         object-fit: contain;
     } */
+
+    #time-line
+    {
+        display: none;
+    }
 }
 @media (max-width: 450px)
 {
@@ -962,6 +973,11 @@ footer ul li
     {
         flex-wrap: wrap;
     }
+    #skills div img
+    {
+        margin-top: 10%;
+        width: 90px; height: 90px;
+    }
     #languages li
     {
         padding: 5px 17px;
@@ -979,11 +995,11 @@ footer ul li
     #project
     {
         padding-top: 5%;
-        height: 982px;
+        height: 820px;
     }
     #project h3
     {
-        font-size: 27pt;
+        font-size: 24pt;
     }
     #project-img
     {
