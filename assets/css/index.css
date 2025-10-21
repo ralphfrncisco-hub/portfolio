@@ -496,62 +496,9 @@ footer ul li
 /* -------------------------------------- */
 /* TIMELINE MEDIA QUERIES (SCOPED) */
 /* -------------------------------------- */
-
-@media screen and (max-width: 1201px)
-{
-    
-}
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 769px) {
     .timeline {
-        display: block;
-        margin: 50px auto 100px auto; /* Centering and better vertical spacing */
-    }
-    .timeline .timeline-events {
-        flex-direction: row;
-    }
-    .timeline .timeline-events li {
-        margin-top: 0px;
-        position: relative;
-        width: 100%;
-        padding: 0px;
-    }
-    .timeline .timeline-events li .timeline-text {
-        transform: translateY(-10px);
-        opacity: 0;
-        transition: 1.5s;
-    }
-
-    .timeline .timeline-date {
-        opacity: 0;
-        transition: 1.5s;
-        font-size: 12px;
-        position: absolute;
-        top: -60px;
-        left: 38%;
-    }
-
-    .timeline .timeline-point {
-        width: 15px;
-        height: 15px;
-        top: -40px;
-        left: 40%;
-        transition: 1.5s ease;
-    }
-
-    .timeline .timeline-line {
-        width: 100%;
-        height: 4px;
-        justify-self: initial; /* Reset justify-self */
-    }
-
-    .timeline .timeline-innerline {
-        width: 0%;
-        height: 4px;
-        top: 0%;
-        left: 0%;
-        transition: 1s linear;
-        border-radius: 999px;
-    }
+        display: none;
 }
 
 @media (max-width: 1367px)
@@ -1020,3 +967,4 @@ footer ul li
         width: 76%;
     }
 }
+
