@@ -493,14 +493,6 @@ footer ul li
     transition: 0.5s linear;
 }
 
-/* -------------------------------------- */
-/* TIMELINE MEDIA QUERIES (SCOPED) */
-/* -------------------------------------- */
-@media screen and (max-width: 769px) {
-    .timeline {
-        display: none;
-}
-
 @media (max-width: 1367px)
 {
     #name-header
@@ -967,4 +959,5 @@ footer ul li
         width: 76%;
     }
 }
+
 
