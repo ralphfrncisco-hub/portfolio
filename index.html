@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ralph Francisco</title>
 
-    <!-- css resources -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -83,8 +82,6 @@
             </div>
         </div>
 
-        <!-- ABOUT SECTION -->
-        
         <div class = "row what-i-do" id = "about">
             <h3 class = "mt-5">What I <span id = "accent">do</span></h2>
             <p data-aos="fade-up">I specialize in designing and developing responsive, user-friendly web applications. With a strong foundation in front-end and back-end integration, 
@@ -106,6 +103,58 @@
                 </div>
             </div>
 
+            <div class = "col-12 col-sm-12 mt-4" data-aos="fade-up">
+                <h3>Educational <span id = "accent">Timeline</span></h3>
+                <section class="timeline">
+                    <div class="timeline-line">
+                        <span class="timeline-innerline"></span>
+                    </div>
+
+                    <ul class="timeline-events">
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2021</span>
+                            <p class="timeline-text" style = "margin-left: -5%;">Started learning Programming</p>
+                        </li>
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2021</span>
+                            <p class="timeline-text" style = "margin-left: -5%;">Started learning MySQL</p>
+                        </li>
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2022</span>
+                            <p class="timeline-text" style = "margin-left: -5%;">Got a grasp on IPv4, Subnetting & LAN</p>
+                        </li>
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2022</span>
+                            <p class="timeline-text">Started learning Web Fundamentals</p>
+                        </li>
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2023</span>
+                            <p class="timeline-text">Started learning PHP (Back-end)</p>
+                        </li>
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2024</span>
+                            <p class="timeline-text" style = "margin-left: -5%;">Started My Capstone Project</p>
+                        </li>
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2025</span>
+                            <p class="timeline-text" style = "margin-left: -5%;">Got an internship at Tech2Go</p>
+                        </li>
+                        <li>
+                            <span class="timeline-point"></span>
+                            <span class="timeline-date">2025</span>
+                            <p class="timeline-text" style = "margin-left: -5%;">Graduated Bachelor's Degree in IT</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
             <div class = "col-12 col-sm-12" id = "tech-stack" data-aos="fade-up">
                 <h3><span id = "accent">Tech</span> Stack</h2>
                 <div id = "languages">
@@ -118,6 +167,7 @@
                         <li>PHP</li>
                         <li>MySQL</li>
                         <li>Bootstrap</li>
+                        <li>Tailwind CSS</li>
                         <li>Git</li>
                         <li>Photoshop</li>
                         <li>Linux</li>
@@ -125,6 +175,8 @@
                     </ul>
                 </div>
             </div>
+            
+
         </div>
 
         <div class = "row" id = "project" data-aos="fade-up">
@@ -188,12 +240,130 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-        duration: 500,      // animation duration in milliseconds
+        duration: 500,       // animation duration in milliseconds
         once: false,          // whether animation should happen only once - while scrolling down
         offset: 100,         // offset (in px) from the original trigger point
         easing: 'ease', // animation easing
         delay: 100           // delay before the animation starts
         });
     </script>
-</body>
+
+    <script>
+        const line = document.querySelector(".timeline-innerline");
+        const timeline_events = document.querySelectorAll(".timeline-events li");
+        let i = 0;
+        let i2 = 1;
+        let target1 = document.querySelector(".timeline-events");
+        let target2 = document.querySelectorAll(".timeline-events li");
+
+        function showTime(e) {
+            e.setAttribute("done", "true");
+            e.querySelector(".timeline-point").style.background = "#FE481C";
+            e.querySelector(".timeline-date").style.opacity = "100%";
+            e.querySelector(".timeline-text").style.opacity = "100%";
+            e.querySelector(".timeline-text").style.transform = "translateY(0px)";
+        }
+
+        function hideTime(e) {
+            e.removeAttribute("done");
+            e.querySelector(".timeline-point").style.background = "rgb(228, 228, 228)";
+            e.querySelector(".timeline-date").style.opacity = "0%";
+            e.querySelector(".timeline-text").style.opacity = "0%";
+            e.querySelector(".timeline-text").style.transform = "translateY(-10px)";
+        }
+
+        function slowLoop() {
+            setTimeout(function () {
+                if (i < timeline_events.length) {
+                    showTime(timeline_events[i]);
+                    timelineProgress(i + 1);
+                    i++;
+                    slowLoop();
+                }
+            }, 800);
+        }
+
+
+        function timelineProgress(value) {
+            let progress = `${(value / timeline_events.length) * 100}%`;
+            if (window.matchMedia("(min-width: 728px)").matches) {
+                line.style.width = progress;
+                line.style.height = "4px";
+            } else {
+                line.style.height = progress;
+                line.style.width = "4px";
+            }
+        }
+
+        let observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.intersectionRatio > 0.9) {
+                        if (window.matchMedia("(min-width: 728px)").matches) {
+                            slowLoop();
+                        } else {
+                            showTime(entry.target);
+                            timelineProgress(i2);
+                            i2++;
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 1, rootMargin: "0px 0px -50px 0px" }
+        );
+        
+        // Initial setup for the observer based on screen size
+        function setupObserver() {
+            // Reset state for new observation cycle
+            timeline_events.forEach(ev => hideTime(ev));
+            i = 0;
+            i2 = 1;
+            timelineProgress(0); 
+
+            if (window.matchMedia("(min-width: 728px)").matches) {
+                observer.unobserve(target1); // Ensure target1 isn't observed multiple times
+                target2.forEach(t => observer.unobserve(t)); // Ensure old individual targets aren't observed
+                observer.observe(target1);
+            } else {
+                observer.unobserve(target1);
+                target2.forEach((t) => {
+                    observer.observe(t);
+                });
+            }
+        }
+
+        setupObserver(); // Run on page load
+
+        // Click event to manually open/close timeline points
+        timeline_events.forEach((li, index) => {
+            li.addEventListener("click", () => {
+                if (li.getAttribute("done")) {
+                    // Hide from current point onwards
+                    timeline_events.forEach((ev, idx) => {
+                        if (idx >= index) {
+                            hideTime(ev);
+                        }
+                    });
+                    timelineProgress(index);
+                } else {
+                    // Show up to current point
+                    timeline_events.forEach((ev, idx) => {
+                        if (idx <= index) {
+                            showTime(ev);
+                        }
+                    });
+                    timelineProgress(index + 1);
+                }
+            });
+        });
+
+        // Resize handler with debounce
+        let doit;
+        window.addEventListener("resize", () => {
+            clearTimeout(doit);
+            doit = setTimeout(setupObserver, 500); // Rerun setupObserver on resize end
+        });
+    </script>
+    </body>
 </html>
