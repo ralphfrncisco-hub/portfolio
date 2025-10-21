@@ -497,10 +497,10 @@ footer ul li
 /* TIMELINE MEDIA QUERIES (SCOPED) */
 /* -------------------------------------- */
 
-@media screen and (min-width: 769px) {
+/* @media screen and (min-width: 769px) {
     .timeline {
         display: block;
-        margin: 50px auto 100px auto; /* Centering and better vertical spacing */
+        margin: 50px auto 100px auto;
     }
     .timeline .timeline-events {
         flex-direction: row;
@@ -537,7 +537,7 @@ footer ul li
     .timeline .timeline-line {
         width: 100%;
         height: 4px;
-        justify-self: initial; /* Reset justify-self */
+        justify-self: initial;
     }
 
     .timeline .timeline-innerline {
@@ -548,7 +548,7 @@ footer ul li
         transition: 1s linear;
         border-radius: 999px;
     }
-}
+} */
 
 @media (max-width: 1367px)
 {
@@ -1013,5 +1013,6 @@ footer ul li
         width: 76%;
     }
 }
+
 
 
