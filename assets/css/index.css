@@ -497,7 +497,11 @@ footer ul li
 /* TIMELINE MEDIA QUERIES (SCOPED) */
 /* -------------------------------------- */
 
-@media screen and (min-width: 728px) {
+@media screen and (max-width: 1201px)
+{
+    
+}
+@media screen and (min-width: 769px) {
     .timeline {
         display: block;
         margin: 50px auto 100px auto; /* Centering and better vertical spacing */
@@ -617,6 +621,12 @@ footer ul li
         padding: 4px 10px;
         font-size: 9pt;
     }
+    .timeline .timeline-events li .timeline-text {
+        font-size: 7pt;
+        padding: 0 25px;
+        transition: 1.5s;
+        /* Scoped P tag for timeline text */
+    }
 }
 
 @media (max-width: 1201px)
@@ -675,6 +685,12 @@ footer ul li
     {
         padding: 4px 10px;
         font-size: 7.5pt;
+    }
+    .timeline .timeline-events li .timeline-text {
+        font-size: 7pt;
+        padding: 0 15px;
+        transition: 1.5s;
+        /* Scoped P tag for timeline text */
     }
 }
 
@@ -796,7 +812,7 @@ footer ul li
 
     .what-i-do
     {
-        height: 1056px;
+        height: 936px;
     }
 
     #skills
@@ -933,7 +949,7 @@ footer ul li
 
     .what-i-do
     {
-        height: 1250px;
+        height: 1000px;
     }
     .what-i-do p
     {
@@ -963,7 +979,7 @@ footer ul li
     #project
     {
         padding-top: 5%;
-        height: 582px;
+        height: 982px;
     }
     #project h3
     {
